@@ -1,0 +1,149 @@
+<!doctype html>
+<html dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Order Detial</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="Untitledhydrablue1.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function()
+{
+function countUpJavaScript4()
+{
+   var $obj = $('#JavaScript4');
+   var count = $obj.attr('data-count');
+   var bottomObj = $obj.offset().top + $obj.outerHeight();
+   var bottomWnd = $(window).scrollTop() + $(window).height();
+   if (bottomWnd > bottomObj && count != 0)
+   {
+      $({countUp: $obj.text()}).animate({countUp: count},
+      {
+         duration: 4000,
+         step: function() { $obj.text(Math.floor(this.countUp)); },
+         complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+      });  
+   }
+}
+$(window).scroll( function()
+{
+   countUpJavaScript4();
+});
+countUpJavaScript4();
+});
+</script>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="wb_navigation">
+<div id="navigation">
+<div class="row">
+<div class="col-1">
+<div id="wb_navigationHeading" style="display:inline-block;width:156px;height:31px;z-index:0;">
+<h1 id="navigationHeading">HydraBlue Pro</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image1" style="display:block;width:100%;height:auto;z-index:1;">
+<img src="images/OIG (5).png" id="Image1" alt="" width="940" height="940">
+</div>
+<div id="wb_Text1">
+<span style="color:#808000;font-family:Vazir;font-size:19px;"><strong>درخواست شما با موفقیت ثبت شد طی 24 ساعت آینده فعال میشود</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text2">
+<p>ساعت ایجاد درخواست :</p>
+</div>
+<div id="wb_JavaScript1" style="display:block;width:100%;z-index:4;">
+<div style="color:#FF8C00;font-size:16px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none" id="basicclock"></div>
+<script>
+function clock() 
+{
+   var digital = new Date();
+   var hours = digital.getHours();
+   var minutes = digital.getMinutes();
+   var seconds = digital.getSeconds();
+   if (minutes <= 9) minutes = "0" + minutes;
+   if (seconds <= 9) seconds = "0" + seconds;
+   dispTime = hours + ":" + minutes + ":" + seconds;
+
+   var basicclock = document.getElementById('basicclock');
+   basicclock.innerHTML = dispTime;
+   setTimeout("clock()", 1000);
+}
+clock();
+</script>
+
+
+</div>
+<div id="wb_JavaScript2" style="display:block;width:100%;z-index:5;">
+<div style="color:#000000;font-size:16px;font-family:Arial;font-weight:normal;font-style:normal;text-align:center;text-decoration:none" id="basicdate"></div>
+<script>
+   var now = new Date();
+   var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+   var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+   var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+   var year = (now.getYear() < 1000) ? now.getYear() + 1900 : now.getYear();
+   today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
+   var basicdate = document.getElementById('basicdate');
+   basicdate.innerHTML = today;
+</script>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text3">
+<p>دستگاه سفارش دهنده :</p>
+</div>
+<div id="wb_JavaScript3" style="display:block;width:100%;z-index:7;">
+<script>
+document.write("<div style='font-family:Arial;font-size:16px;color:#7B68EE;text-decoration:none;font-weight:normal;font-style:normal;text-align:center;text-decoration:none'>" + navigator.appName + " " + navigator.appVersion + "<\/div>");
+</script>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text4">
+<p>درخواست های موفق ثبت شده :</p>
+</div>
+<div id="wb_JavaScript4" style="display:block;width:100%;z-index:9;">
+<div data-count="1205" style="color:#6B8E23;font-size:48px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none;" id="JavaScript4"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
